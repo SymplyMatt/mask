@@ -1,8 +1,10 @@
+import AppContext from './context/AppContext';
 import Routes from './routes/router';
-
 function App() {
   return (
-    <Routes />
+    <AppContext>
+      <Routes />
+    </AppContext>
   );
 }
 
