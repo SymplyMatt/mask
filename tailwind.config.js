@@ -24,6 +24,7 @@ module.exports = {
         20: "20px",
         24: "24px",
         28: "28px",
+        30: "30px",
       },
       colors: {
         fadedBlack: "#646668",
@@ -40,11 +41,13 @@ module.exports = {
         5: "5px",
         10: "10px",
         12: "12px",
+        10: "10px",
         11: "11px",
         16: "16px",
         20: "20px",
         24: "24px",
         28: "28px",
+        30: "30px",
         32: "32px",
         40: "40px",
         48: "48px",
@@ -68,6 +71,14 @@ module.exports = {
       },
       height: {
         80: "80px",
+      },
+      borderRadius: {
+        10: "10px",
+        25: "25px",
+        50: "50%",
+      },
+      fontFamily: {
+        circular: ["Circular", "sans-serif"],
       },
     },
   },

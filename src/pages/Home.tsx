@@ -3,7 +3,7 @@ import Nav from '../components/home/Nav'
 
 const Home = () => {
   return (
-    <div>
+    <div className='px-80 flex flex-col items-center'>
         <Nav />
     </div>
   )
