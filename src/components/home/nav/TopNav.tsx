@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import mask_logo from './mask_logo.png'
-import { Context } from '../../context/AppContext';
-const Nav = () => {
+import { Context } from '../../../context/AppContext';
+const TopNav = () => {
     const { isDarkMode, toggleTheme } = useContext(Context);
   return (
     <div className='py-20 grid grid-cols-3 w-full items-center  justify-between'>
@@ -15,13 +15,13 @@ const Nav = () => {
             <div className="flex items-center gap-20 justify-center cursor-pointer p-10 rounded-50 hover:bg-gray-200" onClick={()=>toggleTheme()}>
                 {isDarkMode ? <i className="fa-solid fa-moon text-20"></i> : <i className="fa-regular fa-sun text-20"></i>}
             </div>
-            <div className="flex items-center gap-20  border border-gray-200 py-5 px-16 rounded-25 cursor-pointer text-gray-500 hover:shadow-md transition duration-300 ease-in-out">
-                <div className="text-20"><i className="fa-solid fa-bars"></i></div>
-                <div className="text-28"><i className="fa-solid fa-circle-user"></i></div>
+            <div className="flex items-center gap-20  border border-gray-200 py-5 px-16 rounded-25 cursor-pointer hover:shadow-md transition duration-300 ease-in-out">
+                <div className="text-20 text-black"><i className="fa-solid fa-bars"></i></div>
+                <div className="text-28 text-gray-500"><i className="fa-solid fa-circle-user"></i></div>
             </div>
         </div>
     </div>
   )
 }
 
-export default Nav
+export default TopNav

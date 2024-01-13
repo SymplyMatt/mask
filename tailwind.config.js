@@ -38,6 +38,7 @@ module.exports = {
         thickGreen: "#188475",
       },
       spacing: {
+        1: "1px",
         5: "5px",
         10: "10px",
         12: "12px",
@@ -75,6 +76,7 @@ module.exports = {
       borderRadius: {
         10: "10px",
         25: "25px",
+        30: "30px",
         50: "50%",
       },
       fontFamily: {
