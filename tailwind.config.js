@@ -33,6 +33,7 @@ module.exports = {
         darkModeColorLight: "#192734",
         darkModeColorThick: "#15202B",
         textGreyDark: "#959da5",
+        maskPurple: "#5a228b",
       },
       textColor: {
         thickGreen: "#188475",

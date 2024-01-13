@@ -30,7 +30,7 @@ const SearchFilter = () => {
                     <div className="font-semibold">Who</div>
                     <div className="">Add guests</div>
                 </div>
-                <div className="rounded-50 bg-red-500 w-50 h-50 flex justify-center items-center font-semibold text-white text-20"><i className="fa-solid fa-magnifying-glass"></i></div>
+                <div className="rounded-50 bg-maskPurple w-50 h-50 flex justify-center items-center font-semibold text-white text-20"><i className="fa-solid fa-magnifying-glass"></i></div>
             </div>
         </div>
     </div>

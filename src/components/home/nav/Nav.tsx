@@ -6,7 +6,7 @@ import SearchFilter from '../SearchFilter';
 const Nav = () => {
     const { isDarkMode, toggleTheme } = useContext(Context);
   return (
-    <div className="flex flex-col w-full gap-10">
+    <div className="flex flex-col w-full">
         <TopNav />
         <SearchFilter />
     </div>

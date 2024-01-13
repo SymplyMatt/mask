@@ -5,9 +5,9 @@ const TopNav = () => {
     const { isDarkMode, toggleTheme } = useContext(Context);
   return (
     <div className='py-20 grid grid-cols-3 w-full items-center  justify-between'>
-        <div className="max-h-30 cursor-pointer grid-column: span 1 flex justify-start"><img src={mask_logo} alt="" className='max-h-30'/></div>
+        <div className="max-h-30 cursor-pointer grid-column: span 1 flex justify-start items-center text-24 text-purple-500"><img src={mask_logo} alt="" className='max-h-30'/></div>
         <div className="flex items-center gap-10 justify-center font-circular grid-column: span 1">
-            <div className="text-black cursor-pointer px-10 rounded-25 p-10">Stays</div>
+            <div className="text-black cursor-pointer px-10 rounded-25 p-10 text-maskPurple">Stays</div>
             <div className="text-gray-500 cursor-pointer px-10 rounded-25 p-10 hover:bg-gray-200">Experiences</div>
             <div className="text-gray-500 cursor-pointer px-10 rounded-25 p-10 hover:bg-gray-200">Online Experiences</div>
         </div>
