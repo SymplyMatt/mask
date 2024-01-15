@@ -25,7 +25,7 @@ const StickyNav = () => {
   return (
     <>
       <div
-        className={`flex flex-col w-full fixed top-0 right-0 z-10 bg-white transition-all duration-100 ${
+        className={`flex flex-col w-full fixed top-0 right-0 z-10 ${isDarkMode ? 'bg-darkModeColorOne' : 'bg-white'} transition-all duration-100 ${
           isVisible ? 'opacity-100' : 'opacity-0 -translate-y-full'
         }`}
       >

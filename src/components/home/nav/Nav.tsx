@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import mask_logo from './mask_logo.png';
 import { Context } from '../../../context/AppContext';
 import TopNav from './TopNav';
 import SearchFilter from './SearchFilter';

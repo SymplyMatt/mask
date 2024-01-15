@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../../context/AppContext';
 
 const TopNavLinks = () => {
+    const { isDarkMode, toggleTheme } = useContext(Context);
   return (
     <div className="flex items-center gap-10 justify-center font-circular grid-column: span 1">
-        <div className="text-black cursor-pointer px-10 rounded-25 p-10 text-maskPurple">Stays</div>
-        <div className="text-gray-500 cursor-pointer px-10 rounded-25 p-10 hover:bg-gray-200">Experiences</div>
-        <div className="text-gray-500 cursor-pointer px-10 rounded-25 p-10 hover:bg-gray-200">Online Experiences</div>
+        <div className={`${isDarkMode ? 'text-white' : 'text-black'} cursor-pointer px-10 rounded-25 p-10`}>Stays</div>
+        <div className={`${isDarkMode ? 'text-white' : 'text-black'} cursor-pointer px-10 rounded-25 p-10 ${isDarkMode ? 'hover:bg-darkModeColorTwo' : 'hover:bg-gray-200'} opacity-50`}>Experiences</div>
+        <div className={`${isDarkMode ? 'text-white' : 'text-black'} cursor-pointer px-10 rounded-25 p-10 ${isDarkMode ? 'hover:bg-darkModeColorTwo' : 'hover:bg-gray-200'} opacity-50`}>Online Experiences</div>
     </div>
   )
 }

@@ -39,6 +39,9 @@ module.exports = {
         iconBlackFade: "#717171",
         textBlack: "#222222",
         footerBgDark: "rgb(249 250 251)",
+        darkModeColorOne: "#292929",
+        darkModeColorTwo: "#121212",
+        fadedWhite: "rgba(255, 255, 255, 0.653)",
       },
       textColor: {
         thickGreen: "#188475",

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import LikeButton from './LikeButton'
 import { Autoplay, Pagination, Navigation } from "swiper";
 import {Swiper, SwiperSlide} from 'swiper/react'
@@ -6,8 +6,10 @@ import { useSwiper } from 'swiper/react';
 import 'swiper/css'
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Context } from '../../../context/AppContext';
 const Listings = () => {
   const [swiper, setSwiper] = useState<any>(null);
+const { isDarkMode, toggleTheme } = useContext(Context);
   return (
     <>
         <div className='px-50 pt-20 pb-50 grid grid-cols-1 phone:grid-cols-1 sm:grid-cols-2 mm:grid-cols-3 md:grid-cols-4 sm-tab:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6 xxl:grid-cols-6 gap-20 w-full'>
@@ -52,12 +54,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -102,12 +104,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -152,12 +154,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -202,12 +204,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -252,12 +254,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -302,12 +304,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -352,12 +354,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -402,12 +404,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -452,12 +454,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -502,12 +504,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -552,12 +554,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -602,12 +604,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -652,12 +654,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -702,12 +704,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -752,12 +754,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -802,12 +804,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -852,12 +854,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -902,12 +904,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -952,12 +954,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1002,12 +1004,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1052,12 +1054,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1102,12 +1104,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1152,12 +1154,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1202,12 +1204,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1252,12 +1254,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1302,12 +1304,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1352,12 +1354,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1402,12 +1404,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1452,12 +1454,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1502,12 +1504,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1552,12 +1554,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1602,12 +1604,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1652,12 +1654,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1702,12 +1704,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1752,12 +1754,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1802,12 +1804,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1852,12 +1854,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1902,12 +1904,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -1952,12 +1954,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
@@ -2002,12 +2004,12 @@ const Listings = () => {
                 </div>
                 <div className="flex justify-between w-full h-100">
                     <div className="flex flex-col">
-                        <div className="text-black font-semibold">Lekki, Nigeria</div>
-                        <div className="text-14 text-fadedBlack">405 Kilometers away</div>
-                        <div className="text-14 text-fadedBlack">Jan 14-19</div>
-                        <div className="text-black font-semibold">$312 night</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>Lekki, Nigeria</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>405 Kilometers away</div>
+                        <div className={`text-14 ${isDarkMode ? 'text-fadedWhite' : 'text-fadedBlack'}`}>Jan 14-19</div>
+                        <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}>$312 night</div>
                     </div>
-                    <div className="text-black font-semibold"><i className="fa-solid fa-star"></i>&nbsp; New</div>
+                    <div className={`${isDarkMode ? 'text-white' : 'text-black'} font-semibold`}><i className="fa-solid fa-star"></i>&nbsp; New</div>
                 </div>
                 <div className="absolute top-20 right-20"><LikeButton /></div>
             </div>
