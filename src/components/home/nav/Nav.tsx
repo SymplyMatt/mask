@@ -3,6 +3,7 @@ import mask_logo from './mask_logo.png';
 import { Context } from '../../../context/AppContext';
 import TopNav from './TopNav';
 import SearchFilter from './SearchFilter';
+import Filters from './Filters';
 
 const Nav = () => {
   const { isDarkMode, toggleTheme } = useContext(Context);
@@ -11,7 +12,7 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      setIsVisible(scrollY === 0);
+      setIsVisible(scrollY === 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -23,14 +24,13 @@ const Nav = () => {
 
   return (
     <>
-      {isVisible && <div
-        className={`flex flex-col w-full px-50 transition-opacity duration-300 ${
-          isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+      <div
+        className={`flex flex-col w-full transition-opacity duration-300`}
       >
         <TopNav />
         <SearchFilter />
-      </div>}
+        <Filters />
+      </div>
     </>
   );
 };

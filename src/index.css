@@ -33,3 +33,6 @@
 .swiper-button-prev.swiper-button-disabled {
     opacity: 0 !important;
 }
+.inline-flex{
+    display: inline-flex !important;
+}

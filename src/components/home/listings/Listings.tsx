@@ -10,7 +10,7 @@ const Listings = () => {
   const [swiper, setSwiper] = useState<any>(null);
   return (
     <>
-        <div className='px-50 py-50 grid grid-cols-1 phone:grid-cols-1 sm:grid-cols-2 mm:grid-cols-3 md:grid-cols-4 sm-tab:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6 xxl:grid-cols-6 gap-20 w-full'>
+        <div className='px-50 pt-20 pb-50 grid grid-cols-1 phone:grid-cols-1 sm:grid-cols-2 mm:grid-cols-3 md:grid-cols-4 sm-tab:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6 xxl:grid-cols-6 gap-20 w-full'>
             <div className="relative flex flex-col justify-between w-full h-372 gap-10 cursor-pointer">
                 <div className="w-full h-272 z-0">
                     <Swiper

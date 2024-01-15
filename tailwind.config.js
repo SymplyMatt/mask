@@ -36,6 +36,7 @@ module.exports = {
         darkModeColorThick: "#15202B",
         textGreyDark: "#959da5",
         maskPurple: "#5a228b",
+        iconBlackFade: "#717171",
         textBlack: "#222222",
         footerBgDark: "rgb(249 250 251)",
       },

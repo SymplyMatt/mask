@@ -7,7 +7,7 @@ import HamburgerProfile from './HamburgerProfile';
 const TopNav = () => {
     const { isDarkMode, toggleTheme } = useContext(Context);
   return (
-    <div className='py-20 grid grid-cols-3 w-full items-center  justify-between'>
+    <div className='py-20 grid grid-cols-3 w-full items-center justify-between px-50'>
         <Logo />
         <TopNavLinks />
         <HamburgerProfile />
