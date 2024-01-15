@@ -3,6 +3,7 @@ import { Context } from '../../../context/AppContext';
 import HamburgerProfile from './HamburgerProfile';
 import Logo from './Logo';
 import StickySearch from './StickySearch';
+import Filters from './Filters';
 
 const StickyNav = () => {
   const { isDarkMode, toggleTheme } = useContext(Context);
@@ -11,7 +12,7 @@ const StickyNav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      setIsVisible(scrollY > 50);
+      setIsVisible(scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -24,7 +25,7 @@ const StickyNav = () => {
   return (
     <>
       <div
-        className={`flex flex-col w-full fixed top-0 right-0 z-10 bg-white transition-all duration-300 ${
+        className={`flex flex-col w-full fixed top-0 right-0 z-10 bg-white transition-all duration-100 ${
           isVisible ? 'opacity-100' : 'opacity-0 -translate-y-full'
         }`}
       >
@@ -33,6 +34,7 @@ const StickyNav = () => {
           <StickySearch />
           <HamburgerProfile />
         </div>
+        <Filters />
         <div className="border-b border-gray-300 w-full"></div>
       </div>
     </>

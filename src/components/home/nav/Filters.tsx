@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 const Filters = () => {
   return (
     <>
-        <div className="border-b border-gray-300 w-full mt-30"></div>
+        <div className="border-b border-gray-300 w-full"></div>
         <div className="grid grid-cols-7 auto gap: 10px; justify-between items-center px-50 pt-20 w-full">
             <div className="col-span-5  flex items-center gap-24 w-full justify-start">
                 <Swiper

@@ -12,7 +12,7 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      setIsVisible(scrollY === 50);
+      setIsVisible(scrollY == 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -24,13 +24,17 @@ const Nav = () => {
 
   return (
     <>
-      <div
-        className={`flex flex-col w-full transition-opacity duration-300`}
+      {isVisible && <div
+        className={`flex flex-col w-full transition-opacity duration-300 transition-all duration-100 ${
+          isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none -translate-y-full'
+        }`}
       >
         <TopNav />
         <SearchFilter />
-        <Filters />
-      </div>
+        <div className="mt-30">
+          <Filters />
+        </div>
+      </div>}
     </>
   );
 };
