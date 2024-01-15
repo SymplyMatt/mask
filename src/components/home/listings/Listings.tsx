@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { Context } from '../../../context/AppContext';
 const Listings = () => {
   const [swiper, setSwiper] = useState<any>(null);
-const { isDarkMode, toggleTheme } = useContext(Context);
+const { isDarkMode } = useContext(Context);
   return (
     <>
         <div className='px-50 pt-20 pb-50 grid grid-cols-1 phone:grid-cols-1 sm:grid-cols-2 mm:grid-cols-3 md:grid-cols-4 sm-tab:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6 xxl:grid-cols-6 gap-20 w-full'>
